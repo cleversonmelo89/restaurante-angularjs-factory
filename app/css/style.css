@@ -2,152 +2,202 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css);
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto Condensed', sans-serif;
-	padding: 0 20px 200px;
-	background-color: #f1f1f1;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0 20px 200px;
+  background-color: #f1f1f1;
 }
 
 h1 {
-	font-size: 3em;
+  font-size: 3em;
 }
 
 input, textarea {
-	display: block;
-	width: 100%;
-	padding: 5px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 button {
-	display: inline-block;
-	border: none;
-	padding: 5px 10px;
-	border-radius: 5px;
-	cursor: pointer;
-	outline: none;
+  display: inline-block;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+#div1{
+  width:90%;
+  height:100px;
+  border:solid 1px;
+  padding-left: 20px;
+}
+
+#div2{
+  width:90%;
+  height:100px;
+}
+
+#centro {
+  width: 400px;
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}*/
+
+/* Change the link color to #111 (black) on hover */
+.menu li a:hover {
+  background-color: #111;
 }
 
 .container {
-	width: 780px;
-	max-width: 90vw;
-	margin: 0 auto;
+  width: 780px;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
-.lista-filmes .filme {
-	position: relative;
-    display: block;
-	background-color: #FFF;
-	border-radius: 10px;
-	margin-bottom: 30px;
-	padding: 20px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+.lista-restaurantes .restaurante {
+  position: relative;
+  display: block;
+  background-color: #FFF;
+  border-radius: 1px;
+  margin-bottom: 1px;
+  padding: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+  padding-left: 20px;
 }
 
-.lista-filmes .filme.com-cartaz {
-	overflow: hidden;
-	padding-left: 200px;
+.lista-restaurantes .restaurante .edit {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 10px;
+  padding: 10px;
+  font-weight: bold;
+  overflow: hidden;
+  color: #6495ED;
 }
 
-.lista-filmes .filme .del {
-	position: absolute;
-	top: 0;
-	right: 0;
-	border: none;
-	background-color: transparent;
-	font-size: 20px;
-	line-height: 10px;
-	padding: 10px;
-	font-weight: bold;
-	overflow: hidden;
-	color: #FC6E51;
+.lista-restaurantes .restaurante .edit:hover {
+  color: #0000CD;
 }
 
-.lista-filmes .filme .del:hover {
-	color: #E9573F;
+.lista-restaurantes .restaurante .edit:after {
+  content: '\220E';
 }
 
-.lista-filmes .filme .del:after {
-	content: '\00D7';
+.lista-restaurantes .restaurante .del {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  line-height: 10px;
+  padding: 10px;
+  font-weight: bold;
+  overflow: hidden;
+  color: #FC6E51;
 }
 
-.lista-filmes .filme img {
-	position: absolute;
-	width: 180px;
-
-	max-height: 260px;
-
-	top: 50%;
-	left: 0;
-
-	transform: translateY(-50%);
+.lista-restaurantes .restaurante .del:hover {
+  color: #E9573F;
 }
 
-.lista-filmes .filme h1 {
-	margin: 0;
-	font-size: 1.5em;
+.lista-restaurantes .restaurante .del:after {
+  content: '\00D7';
 }
 
-.lista-filmes .filme ul {
-	padding: 0;
-	list-style-position: inside;
+.lista-restaurantes .restaurante h1 {
+  margin: 0;
+  font-size: 1.5em;
 }
 
-.lista-filmes .filme p {
-	margin: 0;
+.lista-restaurantes .restaurante ul {
+  padding: 0;
+  list-style-position: inside;
 }
 
-.form-filmes {
-	margin-top: 30px;
-	padding: 20px;
-	background-color: #fff;
+.lista-restaurantes .restaurante p {
+  margin: 0;
 }
 
-.form-filmes h1 {
-	font-size: 2em;
-	margin-top: 0;
+.form-restaurantes {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
 }
 
-.form-filmes .form-campo {
-	margin-bottom: 10px;
+.form-restaurantes h1 {
+  font-size: 2em;
+  margin-top: 0;
 }
 
-.form-filmes .form-campo.pequeno input {
-	width: 100px;
+.form-restaurantes .form-campo {
+  margin-bottom: 10px;
 }
 
-.form-filmes .form-campo.medio input {
-	width: 50%;
+.form-restaurantes .form-campo.pequeno input {
+  width: 100px;
 }
 
-.form-filmes .form-campo label {
-	display: inline-block;
-	margin-bottom: 3px;
+.form-restaurantes .form-campo.medio input {
+  width: 50%;
 }
 
-.form-filmes footer {
-	margin-top: 30px;
-	text-align: right;
+.form-restaurantes .form-campo label {
+  display: inline-block;
+  margin-bottom: 3px;
 }
 
-.form-filmes button[type="submit"] {
-	background-color: #8CC152;
-	color: #fff;
+.form-restaurantes footer {
+  margin-top: 30px;
+  text-align: right;
 }
 
-.form-filmes button[type="submit"]:hover {
-	background-color: #A0D468;
+.form-restaurantes button[type="submit"] {
+  background-color: #8CC152;
+  color: #fff;
 }
 
-.form-filmes button[type="reset"] {
-	background-color: #AAB2BD;
-	color: #fff;
+.form-restaurantes button[type="submit"]:hover {
+  background-color: #A0D468;
 }
 
-.form-filmes button[type="reset"]:hover {
-	background-color: #CCD1D9;
+.form-restaurantes button[type="reset"] {
+  background-color: #AAB2BD;
+  color: #fff;
+}
+
+.form-restaurantes button[type="reset"]:hover {
+  background-color: #CCD1D9;
 }

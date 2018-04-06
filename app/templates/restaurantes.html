@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="restaurantes">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script src="../scripts/angular.min.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/meus-restaurantes.factory.js"></script>
+  <script src="../scripts/restaurantes.controller.js"></script>
+  <script src="../scripts/restaurante.directive.js"></script>
+  <div class=menu>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="./restaurantes.html">Restaurantes</a></li>
+      <li><a href="">Pratos</a></li>
+    </ul>
+  </div>
+</head>
+<body>
+  <h2>Restaurantes</h2>
+  <div align="center">
+    <div id="div1" align="left">
+      <form name="formulario">
+        <div class="form-campo">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome">
+        </div>
+          <footer>
+            <button type="submit" ng-click='pesquisar()'>Pesquisar</button>
+            <button type="submit">Cadastrar novo restaurante</button>
+        </footer>
+      </form>
+    </div>
+    <div id="div2" ng-controller="restaurantesController">
+      <div class="lista-restaurantes" align="left">
+        <div aw-restaurante="r" fn-fechar="removerRestaurante(r._id)" ng-repeat="r in restaurantes"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
